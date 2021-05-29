@@ -1,0 +1,18 @@
+@startuml
+entity Artist {
+}
+entity Album {
+}
+entity Song {
+}
+entity Category {
+}
+entity Podcast {
+}
+entity Episode {
+}
+entity User{
+}
+entity Konser{
+}
+@enduml
