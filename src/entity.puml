@@ -8,8 +8,8 @@ entity Artist {
     twitter : VARCHAR
     wikipedia : VARCHAR
     bio : TEXT
-
 }
+
 entity Album {
     * id : VARCHAR
     --
@@ -17,6 +17,7 @@ entity Album {
     * release : YEAR
     * image : VARCHAR
 }
+
 entity Song {
     * id : VARCHAR
     --
@@ -24,6 +25,7 @@ entity Song {
     * title : VARCHAR
     * duration : INT
 }
+
 entity PlaylistCategory {
     * id : VARCHAR
     --
@@ -40,6 +42,7 @@ entity Playlist{
     category_id : VARCHAR
     * user_id : VARCHAR
 }
+
 entity PodcastCategory {
     * id : VARCHAR
     --
@@ -47,6 +50,7 @@ entity PodcastCategory {
     * image : VARCHAR
     * icon : VARCHAR
 }
+
 entity Podcast {
     * id : VARCHAR
     --
@@ -56,6 +60,7 @@ entity Podcast {
     category_id : VARCHAR
     * user_id : VARCHAR
 }
+
 entity Episode {
     * id : VARCHAR
     --
@@ -65,6 +70,7 @@ entity Episode {
     published_at : DATE
     duration : INT
 }
+
 entity User{
     * id : VARCHAR
     --
@@ -72,7 +78,14 @@ entity User{
     * name : VARCHAR
     birthday : DATE
 }
-entity Concert{
 
+entity Concert{
+    * id : VARCHAR
+    --
+    * event_at : DATETIME
+    * url : VARCHAR
+    * location : VARCHAR
+    lon : DOUBLE
+    lat : DOUBLE
 }
 @enduml
