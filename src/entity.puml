@@ -51,7 +51,7 @@ entity PodcastCategory {
     * icon : VARCHAR
 }
 
-entity Podcast {
+ entity Podcast {
     * id : VARCHAR
     --
     * name : VARCHAR
@@ -93,4 +93,8 @@ Artist }|--|{ Album
 'menentukan relasi Song
 Album ||--|{ Song
 Artist }|--|{ Song
+'menentukan relasi playlist
+PlaylistCategory |o--|{ Playlist
+User ||--|{ Playlist
+Playlist }o--o{ Song
 @enduml
