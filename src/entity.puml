@@ -90,4 +90,7 @@ entity Concert{
 }
 'relasi
 Artist }|--|{ Album
+'menentukan relasi Song
+Album ||--|{ Song
+Artist }|--|{ Song
 @enduml
