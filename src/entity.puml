@@ -95,6 +95,10 @@ Album ||--|{ Song
 Artist }|--|{ Song
 'menentukan relasi playlist
 PlaylistCategory |o--|{ Playlist
-User ||--|{ Playlist
+User ||--o{ Playlist
 Playlist }o--o{ Song
+'relasi podcast
+'misal 1 category punya 1 podcast
+PodcastCategory ||--|{ Podcast
+User ||--o{ Podcast
 @enduml
