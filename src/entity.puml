@@ -101,4 +101,8 @@ Playlist }o--o{ Song
 'misal 1 category punya 1 podcast
 PodcastCategory ||--|{ Podcast
 User ||--o{ Podcast
+'relasi episode hanya ke podcast
+Podcast ||--o{ Episode
+'relasi concert
+Artist }|--o{ Concert
 @enduml
