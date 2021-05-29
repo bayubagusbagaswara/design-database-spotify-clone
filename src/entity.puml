@@ -25,8 +25,14 @@ entity Song {
     * duration : TIME
 }
 entity Category {
+    * id : VARCHAR
+    --
+    * name : VARCHAR
+    * image : VARCHAR
+    * icon : VARCHAR
 }
 entity Podcast {
+
 }
 entity Episode {
 }
