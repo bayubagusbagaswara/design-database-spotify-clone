@@ -95,7 +95,7 @@ Album ||--|{ Song
 Artist }|--|{ Song
 'menentukan relasi playlist
 PlaylistCategory |o--|{ Playlist
-User ||--o{ Playlist
+User ||--o{ Playlist : Create
 Playlist }o--o{ Song
 'relasi podcast
 'misal 1 category punya 1 podcast
@@ -105,4 +105,11 @@ User ||--o{ Podcast
 Podcast ||--o{ Episode
 'relasi concert
 Artist }|--o{ Concert
+'relasi follow artist
+User }o--o{ Artist : Follow
+'relasi like song
+User  }o--o{ Song : Liked Song
+'relasi follow playlist
+User }o--o{ Playlist : Follow
+
 @enduml
