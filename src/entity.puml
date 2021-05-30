@@ -89,27 +89,26 @@ entity Concert{
     lat : DOUBLE
 }
 'relasi
-Artist }|--|{ Album
+Artist }|--|{ Album : Has
 'menentukan relasi Song
-Album ||--|{ Song
-Artist }|--|{ Song
+Album ||--|{ Song : Contains
+Artist }|--|{ Song : Sing
 'menentukan relasi playlist
-PlaylistCategory |o--|{ Playlist
+PlaylistCategory |o--|{ Playlist : Contains
 User ||--o{ Playlist : Create
-Playlist }o--o{ Song
+Playlist }o--o{ Song : Contains
 'relasi podcast
 'misal 1 category punya 1 podcast
-PodcastCategory ||--|{ Podcast
-User ||--o{ Podcast
+PodcastCategory ||--|{ Podcast : Contains
+User ||--o{ Podcast : Create
 'relasi episode hanya ke podcast
-Podcast ||--o{ Episode
+Podcast ||--o{ Episode : Contains
 'relasi concert
-Artist }|--o{ Concert
+Artist }|--o{ Concert : Perform
 'relasi follow artist
 User }o--o{ Artist : Follow
 'relasi like song
 User  }o--o{ Song : Liked Song
 'relasi follow playlist
 User }o--o{ Playlist : Follow
-
 @enduml
